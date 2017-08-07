@@ -1,0 +1,131 @@
+<html>
+<head>
+	<title>Related Article Box</title>
+	<style type="text/css">
+		#navbar-iframe{height:0;visibility:hidden;display:none}
+		html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;font-family:'Open Sans'}
+		.widget{margin:0}
+		.section{margin:0}
+		.widget ul{padding:0;margin:0;line-height:normal}
+		.widget li,.BlogArchive #ArchiveList ul.flat li{padding:0}
+		a:link,a:visited{color:#0089ff;text-decoration:none;margin-left:0;margin-right:0}
+		a:hover{color:#000000}
+		a img{border-width:0}
+		img{max-width:100%;vertical-align:middle;border:0;height:auto}
+		b{font-weight:700}
+		acronym{border-bottom:1px dotted;cursor:help}
+		i{font-style:italic}
+		h1,h2,h3,h4,h5{margin:0;padding:0;display:block;font-weight:700}
+		h1{font-size:150%}
+		h2{font-size:140%}
+		h3{font-size:130%}
+		h4{font-size:120%}
+		h5{font-size:110%}
+		.quickedit,.blog-feeds,.post-feeds{display:none}
+		.clear{clear:both}
+		.hide{visibility:hidden;height:0;overflow:hidden;}
+		body {background: #EAEAEA;}
+	</style>
+<script type='text/javascript'>
+//<![CDATA[
+function loadCSS(e, t, n) { "use strict"; var i = window.document.createElement("link"); var o = t || window.document.getElementsByTagName("script")[0]; i.rel = "stylesheet"; i.href = e; i.media = "only x"; o.parentNode.insertBefore(i, o); setTimeout(function () { i.media = n || "all" }) }
+loadCSS("http://fonts.googleapis.com/css?family=Open+Sans:400,700");loadCSS("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+//]]>
+</script>
+</head>
+<body>
+<div class="content" style="height: 2500px"></div>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+<!-- Related Box -->
+<style type="text/css">
+#related-box {
+    width: 350px;
+    overflow: hidden;
+    height: 200px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.29);
+    transition: all 0.5s;
+}
+#related-box .header h2 {
+    font-size: 12px;
+    margin: 0;
+}
+#related-box .header {
+    padding: 10px 15px;
+    color: #fff;
+    background: #00ABFF;
+}
+#related-box .tombol {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+#related-box .item {
+    padding: 15px;
+    width: 320px;
+    float: left;
+}
+#related-box .list {
+    height: 120px;
+    overflow: hidden;
+    width: 600px;
+    transition: all 0.5s;
+}
+#related-box .gambar img {
+    height: 100px;
+    float: left;
+    width: 50%;
+    margin-right: 10px;
+}
+#related-box .header a {
+    color: #fff;
+}
+#related-box .info {
+    font-size: 12px;
+}
+#related-box .navigation a {
+    float: left;
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    margin-left: 10px;
+    font-size: 10px;
+    width: 10px;
+    padding: 3px;
+}
+#related-box .navigation {
+    position: absolute;
+    width: 60px;
+    right: 20px;
+    bottom: 20px;
+}
+.relatedshow {
+    position: fixed;
+    bottom: 190px;
+    right: -50px;
+    transition: all 0.5s;
+}
+.relatedshow a {
+    color: #fff;
+    background: #00ABFF;
+    padding: 7px 15px;
+    box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.29);
+}
+</style>
+<script type="text/javascript">
+// Related Article Settings
+var relatedbox = {
+	homepage : 'http://www.rithiseth.com', // Change with your homepage url
+    title: 'Related Post', // Widget Title
+    post: 3, // Max post
+    date: true, // Show date
+    scr: 500, // Show the related box if scroll more than 500
+    showcredit: true // Add credit link to support bloggerku.com
+};
+</script>
+<script type="text/javascript" src="relatedbox.min.js"></script>
+<!-- Related Box Finish-->
+</body>
+</html>
