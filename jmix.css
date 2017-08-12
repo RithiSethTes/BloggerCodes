@@ -1,0 +1,1728 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:        Youmax Classic
+Version:        1.0
+Last change:    11 November 2016
+Author:         Jake H.
+Primary use:    Premium 
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Youmax Reset
+2. Youmax Container
+3. Header
+4. Item Container
+5. Image Section
+    5.1 Views Section
+    5.2 Thumbnail Section
+6. Text Section
+    6.1 Title Section
+    6.2 Date Section
+    6.3 Trend Section
+7. Loader
+8. Inline Embed
+9. Popup
+10.Load More Button
+11.Double List View
+12.Grid View
+13.Neat View
+14.Simple View
+15.Header
+16.Media Queries
+-------------------------------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Condensed:400,700");
+@import url("./font-awesome/css/font-awesome.min.css");
+
+
+
+/*------------------------------
+[1. Youmax Reset]
+------------------------------*/
+
+.youmax i {
+    font-size: inherit !important;
+}
+
+
+/*------------------------------
+[2. Youmax Container]
+------------------------------*/
+
+.youmax {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ECEFF1;
+    text-align: center;
+    margin: auto;
+    font-size: 16px;        /*which is 16px*/
+}
+
+.yl-font-controller {
+    font-size: 100%;
+}
+
+.yl-wrapper {
+    padding: 4%;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*------------------------------
+[3. Header]
+------------------------------*/
+
+.yl-list-title {
+    color: #686868;
+    border-bottom: none;
+    margin-bottom: 4%;
+    text-align: left;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    width: 100%;
+}
+
+.yl-list-title select {
+    width: auto;
+    height: auto;
+    font-size: 0.94em;         
+    font-family: 'Open Sans', sans-serif;
+    border: 0px;
+    /*box-shadow: 2px 5px 5px -2px rgba(0,0,0,0.2);*/
+    box-shadow: 0.125em 0.3125em 0.3125em -0.125em rgba(0,0,0,0.2), -0.2em 0px 0px 0px #FF5722;
+    outline: none;
+    letter-spacing: 0.5px;
+    line-height: 3.5em;  
+    float: right;
+    padding: 0.4em;
+    /*border-radius: 2px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;*/
+}
+
+/*Firefox Bug for text indent
+@-moz-document url-prefix() {
+    .yl-list-title select {
+       text-indent: 4.5%;   
+    } 
+}*/
+
+
+.yl-switch {
+    display: inline-block;
+    float: right;
+    padding: 0.4em 0.6em;
+    background-color: #0093a5;
+    color: #fbfbfb;
+    line-height: 1.4em;
+    box-shadow: 0.125em 0.3125em 0.3125em -0.125em rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.yl-switch i {
+    width: 1em;
+    text-align: center;
+}
+
+
+/*------------------------------
+[4. Item Container]
+------------------------------*/
+
+.yl-item-container {
+    display: inline-block;
+    width: 100%;
+    float: left;
+}
+
+.yl-item-wrapper {
+    margin-bottom: 3.0728%;
+    text-align: center;
+}
+
+.yl-item {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 0px;
+    background-color: #fbfbfb;
+    /*box-shadow: 2px 5px 5px -2px rgba(0,0,0,0.2);*/
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.28);
+    text-align: left;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    overflow: hidden;
+    color:#828282;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.yl-item:hover {
+    
+}
+
+.yl-item.yl-fading {
+    opacity: 0.4;
+}
+
+
+/*------------------------------
+[5. Image Section]
+------------------------------*/
+
+.yl-focus {
+    display: inline-block;
+    float: left;
+    padding: 0px;
+    width: 45%;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/*[5.1 Views Section]-----------------*/
+
+.yl-view-bucket {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    clear: both;
+    float: left;
+    border-radius: 2px;
+    cursor: pointer;    
+    /*position: relative;*/
+    box-shadow: none;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: #423d4a;
+    margin-top: 14.5985%;       /* 20px / 137px */
+    text-align: center;
+    color: #423d4a;
+    background-color: inherit;
+    line-height: 0px;
+
+    display:none;
+}
+
+.yl-view-wrapper {
+    display: inline-block;
+    padding: 0.32em;
+    padding-bottom: 0.38em;
+}
+
+.yl-view-icon {
+    padding-bottom: 0px;
+    text-align: center;
+    padding-top: 0.1875em;  /* 3px / 16px */
+    border:none;
+    height: auto;
+    width: auto;
+    margin: 0px;
+    float: left;
+    display: inline-block;
+}
+
+.triangle-with-shadow {
+    width: 0px;
+    height: 0px;
+    transition:all 0.2s;
+    -webkit-transition:all 0.2s;
+    border-bottom: 0.6875em solid;              /* 11px / 16px */
+    border-left: 0.375em solid transparent;     /* 6px / 16px */
+    border-right: 0.375em solid transparent;    /* 6px / 16px */
+    margin: 0px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.yl-view-count {
+    text-align: center;
+    float: left;
+    
+    font-weight: 400;
+    font-size: 0.8125em;        /* 13px / 16px */
+    display: inline-block;
+    width: auto;
+    padding-left: 0.38461em;    /* 5px / 13px */
+    line-height: 1.3076em;      /* 17px / 13px */
+}
+
+/*.yl-view-count span, .yl-view-string span {
+    font-size: 0.9em;
+}*/
+
+.triangle-with-hover {
+    transform: rotate(90deg) scale(1.4,1.4);
+    -webkit-transform: rotate(90deg) scale(1.4,1.4);
+}
+
+.yl-view-bucket-seen {
+    color: #ffffff;
+    background-color: #FF5722;
+    border-color: #FF5722;
+}
+
+/*[5.2 Thumbnail Section]-----------------*/
+
+.yl-thumbnail {
+    width: 100%;
+    float: left;
+    /*font-size: 0px;*/
+    line-height: 0px;
+    position: relative;
+}
+
+.yl-thumbnail img {
+    width: 100%;
+    border: none;
+}
+
+/*[5.3 Duration Section]-----------------*/
+
+.yl-duration {
+    position: absolute;
+    left: 8%;
+    top: 8%;
+    background-color: rgba(0,0,0,0.6);
+    width: auto;
+    height: auto;
+    display: inline-block;
+    font-size: 0.7em;
+    line-height: 1em;
+    color: white;
+    padding: 0.3em;
+    font-weight: bold;
+    /*border-radius: 2px;*/
+    transition:all 0.4s;
+}
+
+.yl-duration i {
+    font-size: 0.9em !important;
+    vertical-align: baseline;
+}
+
+/*------------------------------
+[6. Text Section]
+------------------------------*/
+
+.yl-text {
+    float: left;
+    box-sizing: border-box;
+    width: 55%;
+    padding: 0.6em 1em 0.6em 1em;
+}
+
+/*[6.1 Title Section]-----------------*/
+
+.yl-title {
+
+    color: #383838;
+    overflow: hidden;
+    margin-bottom: 0.15em;
+    
+    /*double line title*/
+    font-size: 0.8em;
+    font-weight: normal;
+    max-height: 3.1em;
+    line-height: 1.57em;
+    font-family: sans-serif;
+
+
+}
+
+/*@-moz-document url-prefix() {
+    .yl-title {
+       font-weight: 300; 
+    } 
+}*/
+
+.yl-description {
+    overflow: hidden;
+    color: #828282;
+    height: auto;
+    font-weight: 300;
+    
+    font-size: 0.85em;
+    /*max-height: 3.3em;*/
+    line-height: 1.5em;
+
+    /*TO TRY - lower font size
+    font-size: .82em; instead of .86em
+    */
+}
+
+.yl-description a {
+    color: rgb(109, 109, 109);
+    text-decoration: none;
+}
+
+.yl-title-description-wrapper {
+    height: 5.3em;
+    overflow: hidden;
+}
+
+/*[6.2 Date Section]-----------------*/
+
+.yl-date-bucket {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    float: left;
+    background-color: #6f6f6f;
+    
+    font-size: 0.75em;          /* 12px / 16px */
+    text-align: center;
+    color: #423d4a;
+    margin-top: 0.68em;         
+    box-shadow: none;
+    background-color: transparent;
+}
+
+/*.yl-date-bucket span {
+    font-size: 0.9em;
+}*/
+
+.yl-date {
+    height: auto;
+    /*font-weight: bold;*/
+    float: left;
+    padding-right: 3px;
+}
+
+.yl-month {
+    float: left;
+        padding-right: 3px;
+}
+
+.yl-year {
+    float: left;
+}
+
+
+/*[6.3 Trend Section]-----------------*/
+
+.yl-views-per-day {
+    display: none;
+    float: left;
+    position: relative;
+    color: white;
+    font-size: 0.85em;
+    background-color: inherit;
+    color: #FF5722;
+    margin-top: 0.68em;
+    margin-left: 0.625em;       /* 10px / 16px */
+    border-left: 1px solid;
+    padding-left: 0.625em;      /* 10px / 16px */
+}
+
+.yl-view-string {
+    color: #423d4a;
+    font-size: 0.75em;
+}
+
+
+
+/*------------------------------
+[7. Loader]
+------------------------------*/
+
+.yl-loader {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin: 20.243% 0px;        /* 100px / 494px */
+    display: inline-block;
+    font-size: 1.5em;
+    text-align: left;
+    border-left: 1px solid;
+    border-color: rgb(109, 109, 109);
+    padding-left: 0.375em;      /* 6px / 16px */
+    color: #828282;
+    line-height: 1.1875em;      /* 19px / 16px */
+}
+
+.yl-loader span {
+    font-size: 0.65em;          /* 13px / 20px */
+}
+
+
+/*------------------------------
+[8. Inline Embed]
+------------------------------*/
+
+.yl-inline-container {
+    /*margin-bottom: 5.097%;*/
+    display: none;
+    width: 100%;
+}
+
+.fluid-width-video-wrapper {
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+
+.yl-inline-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*------------------------------
+[9. Popup]
+------------------------------*/
+
+.mfp-iframe-holder .mfp-content {
+    max-width: 60%;
+}
+
+.yp-popup-details {
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    line-height: normal;
+    padding: 2em;
+    padding-bottom: 2.5em;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Roboto Condensed',sans-serif;
+    text-align: left;
+    position: absolute;
+    margin-bottom: 2em;
+}
+
+.yp-inline-popup {
+    position: static;
+}
+
+.yp-popup-title {
+    font-size: 1.5em;
+    margin-bottom: 0.4em;
+    color: #171717;
+}
+
+.yp-popup-description {
+    font-size: 0.92em;
+    color: #565656;
+    line-height: 1.45em;
+}
+
+.yp-popup-description a {
+    color: #5C6BC0;
+    text-decoration: none;
+}
+
+.yp-show-less {
+    max-height: 8.5em;
+    overflow: hidden;
+}
+
+.yp-popup-more-button {
+    font-size: 0.9em;
+    background-color: #e2e1e1;
+    display: inline-block;
+    color: #353535;
+    padding: 0.1em 0.2em 0.1em 0.3em;
+    border-radius: 4px;
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+    cursor: pointer;
+}
+
+.yp-left-section {
+    width: 10%;
+    display: inline-block;
+    float: left;
+    border-right: 1px solid #b3b3b3;
+    margin-right: 3%;
+}
+
+.yp-right-section {
+    width: 86%;
+    display: inline-block;
+    float: right;
+}
+
+/*sharing buttons*/
+
+.yp-share {
+    display: inline-block;
+    background-color: grey;
+    color: white;
+    padding: 1em;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 1em;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.yp-share:last-child {
+    margin:0px;
+}
+
+.yp-share:hover {
+    background-color: #3F51B5;
+}
+
+.yp-share i {
+    width: 1em;
+}
+
+
+/*Simple Popup View*/
+
+.yl-simple-popup .yp-left-section {
+    width: auto;
+    margin-top: 2em;
+    border: none;
+}
+
+.yl-simple-popup .yp-share {
+    padding: 1.3em;
+    width: auto;
+    margin: 0px;
+}
+
+.yl-simple-popup .yp-right-section {
+    width: 100%;
+}
+
+
+
+/*Popup likes*/
+
+.yp-post-like-box {
+    margin-top: 1em;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid #b3b3b3;
+    padding: 0px;
+}
+
+.yp-post-like-box img {
+    width: 2.1em;
+    padding: 0.4em 0.2em 0.4em 0.5em;
+    float: left;
+}
+
+.yp-post-like-count {
+    color: #565656;
+    padding: 0.4em;
+    margin-left: 0.4em;
+    display: inline-block;
+    float: left;
+    text-align: right;
+    font-size: 0.9em;
+}
+
+.yp-post-like-count span {
+    font-size: 0.8em;
+    margin-left: 0.3em;
+}
+
+.yp-post-likes {
+    background-color: grey;
+    color: #ffffff;
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    float: left;
+    font-size: 0.9em;
+    margin-left: 0.4em;
+    cursor: pointer;
+}
+
+.yp-add-like-icon {
+    display: inline-block;
+    float: right;
+    font-size: 2em;
+    padding: 0.2em 0.2em 0.3em 0.5em;
+}
+
+.yp-post-likes i {
+    margin-right: 0.3em;
+}
+
+
+
+/*Popup Comments*/
+
+.yp-post-comments {
+    margin-top: 1em;
+    font-size: 0.9em;
+    color: #565656;
+}
+
+.yp-comment span {
+    color: #F44336;
+}
+
+.yp-comment {
+    margin: 0.3em 0em;
+}
+
+.yp-comment img {
+    width: 1.4em;
+    float: left;
+    margin-right: 0.4em;
+    display: none;
+}
+
+/*Add comment*/
+
+.yp-add-comment-box {
+    margin-top: 1em;
+    display: inline-block;
+    width: 100%;
+}
+
+#yp-add-comment-text {
+    float: left;
+    font-family: Roboto Condensed;
+    width: 80%;
+    box-shadow: 0px 0px 0px 1px #b3b3b3;
+    border: none;
+    height: 2.8em;
+    padding: 1em;
+    box-sizing: border-box;
+    font-size: 0.84em;
+    background: #f7f7f7;
+}
+
+.yp-add-comment-button {
+    display: inline-block;
+    background-color: grey;
+    color: white;
+    width: 18%;
+    height: 2.35em;
+    float: left;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 2.35em;
+    box-shadow: 0px 0px 0px 1px grey;
+    cursor: pointer;
+}
+
+/*Comment Snapshot*/
+
+.yp-post-comment-snap {
+    margin-top: 1em;
+    padding: 0.2em;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid #b3b3b3;
+}
+
+.yp-post-comment-count {
+    color: #565656;
+    padding: 0.2em;
+    display: inline-block;
+    float: left;
+    text-align: right;
+    font-size: 0.9em;
+}
+
+.yp-post-comment-count span {
+    font-size: 0.8em;
+    margin-left: 0.3em;
+}
+
+.yp-post-comment-users {
+    background-color: inherit;
+    display: inline-block;
+    padding: 0.1em;
+    /* width: 100%; 
+    height: 2.55em;*/
+    overflow: hidden;
+    /* margin-top: 1em; */
+    box-sizing: border-box;
+    float: left;
+}
+
+.yp-post-comment-users img {
+    float: left;
+    padding: 0.3em;
+    width: 2em;
+    box-sizing: content-box;
+}
+
+/*------------------------------
+[10. Load More Button]
+------------------------------*/
+
+.yl-load-more-button,.yl-previous-button,.yl-next-button {
+    width: 48.5%;
+    float: left;
+    height: auto;
+    display: inline-block;
+    /*border-radius: 2px;*/
+    cursor: pointer;
+    padding: 1.35em 0px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #fbfbfb;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.28),-.2em 0 0 0 #6d6d6d;
+    color: black;
+    transition: all 0.3s;
+}
+
+.yl-load-more-button:hover {
+    background: linear-gradient(to right,rgba(255, 255, 255, 0.33),#ffffff 30%);
+}
+
+.yl-load-more-button i {
+    vertical-align: baseline;
+}
+
+.yl-loading {
+    background: rgba(0, 147, 165,0.5) !important;
+}
+
+.yl-previous-button,.yl-next-button {
+    width:22.5%;
+}
+
+.yl-previous-button {
+    margin-right: 3%
+}
+
+
+/*------------------------------
+[11. Tabs]
+------------------------------*/
+
+.yl-tab-container {
+    background-color: #FF5722;
+    color: black;
+    padding: 0.5em 0px;
+    border-radius: 2px;
+    display: inline-block;
+    float: left;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: inherit;
+
+}
+
+.yl-tab-container i {
+    margin: 0px 1.17em;
+    font-size: 1.13em;
+    display: none;
+}
+
+.yl-tab {
+    display: inline-block;
+    margin-right: 1.5em;
+    font-size: 1.064em;
+    cursor: pointer;
+    position: relative;
+}
+
+.yl-selected-tab:after {
+    content: "";
+    position: absolute;
+    bottom: -0.3em;
+    left: 0px;
+    width: 0.7em;
+    height: 0.07em;
+    background-color: #6f6f6f;
+}
+
+
+/*------------------------------
+[12. Double List View]
+------------------------------*/
+
+.yl-double-list .yl-item-wrapper:nth-child(odd) {
+    margin-right: 3%;
+}
+.yl-double-list .yl-item-wrapper {
+    width: 48.5%;
+    float: left;
+    margin-bottom: 3%;
+}
+
+/*
+.yl-double-list .yl-focus {
+    padding: 0px;
+    width: 45%;
+}
+
+.yl-double-list .yl-text {
+    width: 55%;
+    padding: 0.6em 1em 0.6em 1em;
+}
+*/
+.yl-double-list .yl-title-description-wrapper {
+    height: 4.3em;
+}
+
+.yl-double-list .yl-date-bucket, .yl-double-list .yl-views-per-day, .yl-double-list .yl-duration {
+    display: none;
+}
+
+
+/*------------------------------
+[12. Single List View]
+------------------------------*/
+
+.yl-list .yl-text {
+    padding: 0.9em 1em 1em 1.3em;
+}
+
+.yl-list .yl-view-string {
+    display: inline-block;
+    margin-top: 0.38em;
+    margin-left: 0.5em;
+    border-left: 1px solid;
+    padding-left: 0.5em;
+}
+
+.yl-list .yl-date-bucket {
+    margin-top: 0.38em;
+}
+
+.yl-list .yl-duration {
+    left: 3%;
+    top: 7%;
+}
+
+.yl-list .yl-title-description-wrapper {
+    max-height: 5.3em;
+}
+
+/*------------------------------
+[12. Grid View]
+------------------------------*/
+
+/*.yl-grid .yl-item {
+    position: relative;
+}*/
+
+.yl-grid .yl-focus {
+    width: 100%;
+    padding: 8%;
+    padding-bottom: 0px;
+    padding: 0;
+}
+
+.yl-grid .yl-text {
+    width: 100%;
+    padding: 4% 6% 6% 6%;
+}
+
+/*
+.yl-title {
+    margin-bottom: .25em;
+    font-size: 1.3em;
+}
+
+.yl-description {
+    font-size: 0.86em;
+    max-height: 3.3em;
+    line-height: 1.7em;
+}*/
+
+.yl-grid .yl-date-bucket {
+    position: absolute;
+    right: 8%;
+    bottom: 6%;
+}
+
+.yl-grid .yl-views-per-day {
+    display: none;
+}
+
+.yl-grid .yl-view-wrapper {
+    padding: 0px;
+}
+
+.yl-grid .yl-item:hover {
+}
+
+/*
+.yl-grid .yl-wrapper {
+    padding: 4%;
+}
+
+.yl-grid .yl-list-title {
+    margin-bottom: 7%;
+}*/
+
+.yl-grid .yl-separator-for-grid {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin-top: 0.7em;
+}
+
+.yl-grid .yl-duration {
+    display: inline-block;
+    left: 8%;
+}
+
+.yl-grid .yl-view-string {
+    display: inline-block;
+    float: left;
+    margin-top: 0.3em;
+    font-weight: normal;
+    margin-right: 6px;
+    padding-right: 6px;
+    margin-top: 1em;
+}
+
+.yl-grid .yl-date-bucket {
+    position: static;
+    margin-top: 0.3em;
+    font-weight: normal;    
+    float: right;
+    margin-top: 1em;
+}
+
+/*5 Column Grid*/
+.yl-5-col-grid .yl-item-wrapper {
+    width: 18.4%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+.yl-5-col-grid .yl-item-wrapper:nth-child(5n) {
+    margin-right: 0px;
+}
+
+.yl-5-col-grid .yl-item-wrapper:nth-child(5n+1) {
+    clear: both;
+}
+
+/*4 Column Grid*/
+.yl-4-col-grid .yl-item-wrapper {
+    width: 23.5%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+.yl-4-col-grid .yl-item-wrapper:nth-child(4n) {
+    margin-right: 0px;
+}
+
+.yl-4-col-grid .yl-item-wrapper:nth-child(4n+1) {
+    clear: both;
+}
+
+.yl-4-col-grid .yl-header {
+    padding: 3%;
+}
+
+.yl-4-col-grid .yl-wrapper {
+    padding: 3%;
+}
+
+.yl-4-col-grid .yl-list-title {
+    margin-bottom: 3%;
+}
+
+/*3 Column Grid*/
+.yl-3-col-grid .yl-item-wrapper {
+    width: 31.3%;
+    float: left;
+    margin-right: 3%;
+    margin-bottom: 3%;
+}
+
+.yl-3-col-grid .yl-item-wrapper:nth-child(3n) {
+    margin-right: 0px;
+}
+
+.yl-3-col-grid .yl-item-wrapper:nth-child(3n+1) {
+    clear: both;
+}
+
+/*2 Column Grid*/
+.yl-2-col-grid .yl-item-wrapper {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+    margin-bottom: 4%;
+}
+
+.yl-2-col-grid .yl-item-wrapper:nth-child(2n) {
+    margin-right: 0px;
+}
+
+.yl-2-col-grid .yl-item-wrapper:nth-child(2n+1) {
+    clear: both;
+}
+
+
+/*------------------------------
+[14. Simple View]
+------------------------------*/
+
+.yl-simple-thumbnails .yl-title-description-wrapper {
+    height: auto;
+}
+
+.yl-simple-thumbnails .yl-text {
+    padding: 4% 6%;
+}
+
+.yl-simple-thumbnails .yl-title {
+    font-size: 0.8em;
+    height: 3.1em;
+}
+
+.yl-simple-thumbnails .yl-description {
+    display: none;
+}
+
+.yl-simple-thumbnails .yl-separator-for-grid {
+    display: none;
+}
+
+.yl-simple-thumbnails .yl-date-bucket {
+   display: none;
+}
+
+.yl-simple-thumbnails .yl-view-string {
+   display: none;
+}
+
+.yl-simple-thumbnails .yl-views-per-day {
+    display: none;
+}
+
+.yl-simple-thumbnails .yl-duration {
+    display: inline-block;
+    left: 6%;
+}
+
+
+/*------------------------------
+[15. Neat View]
+------------------------------*/
+
+.yl-neat-thumbnails .yl-title-description-wrapper {
+    height: auto;
+}
+
+.yl-neat-thumbnails .yl-text {
+    padding: 4% 6%;
+}
+
+.yl-neat-thumbnails .yl-title {
+    max-height: 1.5em;
+}
+
+.yl-neat-thumbnails .yl-view-string {
+    border-right: 1px solid rgba(0,0,0,0.3);
+    margin-top: 0.3em;
+    float: left;
+}
+
+.yl-neat-thumbnails .yl-description {
+    display: none;
+}
+
+.yl-neat-thumbnails .yl-separator-for-grid {
+    display: none;
+}
+
+.yl-neat-thumbnails .yl-date-bucket {
+    float: none;
+    margin-top: 0.3em;
+    float: left;
+}
+
+.yl-neat-thumbnails .yl-date {
+    font-weight: normal;
+}
+
+.yl-neat-thumbnails .yl-views-per-day {
+    display: none;
+}
+
+.yl-neat-thumbnails .yl-duration {
+    display: inline-block;
+    left: 6%;
+}
+
+
+
+
+/*------------------------------
+[7. Playlist Count Box]
+------------------------------*/
+
+
+.yl-playlist-video-count {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.yl-playlist-line {
+    width: 40%;
+    border: 2px solid rgb(218, 218, 218);
+    display: inline-block;
+}
+
+.yl-playlist-line-wrapper {
+    font-size: 0.6em;
+    margin-top: 0.5em;
+    line-height: 1.2em;
+}
+
+.yl-playlist-video-count-box {
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 10.5em;
+    line-height: 1.5em;
+    font-size: 0.8em;
+}
+
+.yl-playlist-video-count-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    width: 30%;
+    text-align: center;
+    pointer-events:none;
+}
+
+/*Reducing Thumbnail Text for Playlist Items*/
+
+.yl-playlist .yl-title-description-wrapper {
+    height: auto;
+}
+
+.yl-playlist .yl-view-string {
+    display: none;
+}
+
+.yl-playlist .yl-date-bucket {
+    float: left;
+    margin-top: 0.1em;
+}
+
+.yl-playlist .yl-description {
+    display: none;
+}
+
+.yl-playlist .yl-separator-for-grid {
+    display: none;
+}
+
+.yl-playlist .yl-text {
+    padding: 4% 6%;
+}
+
+/*Reducing Popup data for Playlist Items*/
+
+.yl-playlist .yp-post-like-box,.yl-playlist .yp-add-comment-box,.yl-playlist .yp-post-comment-snap,.yl-playlist .yp-post-comment-box {
+    display: none;
+}
+
+/*------------------------------
+[16. Play Hover]
+------------------------------*/
+
+
+.yl-play-overlay {
+    display: none;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    pointer-events: none;
+}
+
+.yl-play-icon-holder {
+    width: 5em;
+    height: 2.1em;
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid white;
+    text-align: center;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.yl-play-icon-holder i {
+    font-size: 1em !important;
+    padding: 0.6em;
+}
+
+.yl-play-icon-holder span {
+    display: inline-block;
+    font-size: 1em;
+    line-height: 1em;
+    padding: 0.6em;
+    padding-left: 0em;
+    font-weight: bold;
+}
+
+.yl-duration-big {
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    left: 50% !important;
+    top: 50%;
+    font-size: 1em;
+    text-align: center;
+    z-index: 100;
+    border: 0.15em solid white;
+    padding: 0.3em 0.55em;
+}
+
+.yl-duration-big i {
+    vertical-align: 1px;
+}
+
+
+/*------------------------------
+[16. Header]
+------------------------------*/
+
+.yl-header {
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(109, 109, 109);
+    color: #fbfbfb;
+    line-height: 0px;
+    float: left;
+    padding: 3% 4%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.yl-channel-thumbnail {
+    display: inline-block;
+    float: left;
+}
+
+.yl-channel-thumbnail img {
+    width: 4.5em;
+}
+
+.yl-channel-details {
+    display: inline-block;
+    float: left;
+    padding-left: 1.3em;
+}
+
+.yl-channel-name {
+    display: inline-block;
+    float: left;
+    font-size: 1.3em;
+    font-family: 'Open Sans';
+    line-height: 1.4em;
+    padding-top: 0.3em;
+}
+
+.yl-channel-name a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.yl-subscribe {
+    display: inline-block;
+    float: left;
+    clear: both;
+    padding-top: 0.6em;
+}
+
+.yl-channel-search {
+    display: inline-block;
+    float: right;
+    margin-top: 1.5em;
+    background-color: white;
+    color: black;
+    padding: 0.3em 0.5em;
+}
+
+input.yl-channel-search-input {
+    border: none;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0px;
+    font-size: 0.85em;
+    background-color: inherit;
+    color: inherit;
+    width: auto;
+    line-height: 1.4em;
+}
+
+.yl-channel-search i {
+    float: right;
+}
+
+
+/*------------------------------
+[17. CTA]
+------------------------------*/
+
+.yl-cta-button {
+    width: 48.5%;
+    display: inline-block;
+    padding: 1.35em 0px;
+    /*border-radius: 2px;*/
+    background-color: #00BCD4;
+    color: white;
+    box-shadow: 0.125em 0.3125em 0.3125em -0.125em rgba(0,0,0,0.2);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    float: right;
+}
+
+.yl-cta-button i {
+    vertical-align: baseline;
+}
+
+
+/*------------------------------
+[18. Callouts]
+------------------------------*/
+
+.yl-callout-container {
+    display: inline-block;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.yl-callout {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.2), 0.2em 0px 0px 0px rgb(0, 172, 193);
+    background-color: #fbfbfb;
+    font-family: Roboto Condensed;
+}
+
+.yl-callout-left {
+    width: 30%;
+    display: inline-block;
+    float: left;
+    line-height: 0;
+}
+
+.yl-callout-left img {
+    width: 100%;
+}
+
+.yl-callout-right {
+    width: 67%;
+    display: inline-block;
+    float: left;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.yl-callout-title {
+    font-size: 1.5em;
+    font-family: Open Sans;
+}
+
+.yl-callout-description {
+    font-size: 0.9em;
+    color: #686868;
+    margin-top: 0.1em;
+    line-height: 1.5em;
+}
+
+.yl-callout-buy-button {
+    display: inline-block;
+    background-color: rgb(0, 172, 193);
+    color: #fbfbfb;
+    padding: 0.3em 0.5em;
+    margin-top: 0.5em;
+}
+
+.yl-callout-preview-button {
+    display: inline-block;
+    padding: 0.3em 0.5em;
+    background-color: #00acc1;
+    color: white;
+    margin-right: 0.4em;
+    font-size: 1.01em;
+}
+
+.yl-callout-preview-button i {
+    font-size: 0.8em;
+}
+
+
+/*List Callouts*/
+.yl-list-callouts .yl-callout {
+    width: 100%;
+    margin-bottom: 4%;
+}
+
+.yl-list-callouts .yl-callout-left {
+    width: 35%;
+}
+
+.yl-list-callouts .yl-callout-right {
+    width: 59%;
+    padding: 1.5% 3% 3% 3%;
+}
+
+/*Grid Callouts*/
+.yl-grid-callouts .yl-callout {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+    margin-bottom: 4%;
+}
+
+.yl-grid-callouts .yl-callout-left {
+    width: 100%;
+}
+
+.yl-grid-callouts .yl-callout-right {
+    width: 100%;
+    padding: 3% 5% 5% 5%;
+}
+
+.yl-grid-callouts .yl-callout:nth-child(2n) {
+    margin-right: 0px;
+}
+
+.yl-grid-callouts .yl-callout:nth-child(2n+1) {
+    clear: both;
+}
+
+/*Double List Callouts*/
+.yl-double-list-callouts .yl-callout {
+    width: 48%;
+    padding: 1em;
+    float: left;
+    margin-right: 4%;
+    margin-bottom: 4%;
+}
+
+.yl-double-list-callouts .yl-callout-left {
+    width: 30%;
+}
+
+.yl-double-list-callouts .yl-callout-right {
+    width: 70%;
+    padding: 0% 2% 3% 5%;
+}
+
+.yl-double-list-callouts .yl-callout:nth-child(2n) {
+    margin-right: 0px;
+}
+
+.yl-double-list-callouts .yl-callout:nth-child(2n+1) {
+    clear: both;
+}
+
+
+/*------------------------------
+[19. Offers]
+------------------------------*/
+
+.yl-offer-enabled .yl-channel-search, .yl-offer-enabled #yl-sort-order, .yl-offer-enabled .yl-switch {
+    display: none;
+}
+
+.yl-offer {
+    display: inline-block;
+    float: right;
+    width: 20%;
+    background-color: #FFC107;
+    text-align: left;
+    padding: 1em;
+    position: absolute;
+    right: 4%;
+    box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.2), 0.2em 0px 0px 0px rgb(255, 109, 51);
+    font-family: Roboto Condensed;
+    box-sizing: border-box;
+}
+
+.yl-offer-title {
+    display: inline-block;
+    line-height: 1.1em;
+    width: 100%;
+    font-size: 1.5em;
+    color: #636363;
+}
+
+.yl-offer-description {
+    display: inline-block;
+    line-height: 1.6em;
+    margin-top: 0.3em;
+    font-size: 0.9em;
+    color: #5a5858;
+    width: 100%;
+}
+
+.yl-offer-button {
+    display: inline-block;
+    background-color: rgb(0, 172, 193);
+    color: #fbfbfb;
+    padding: 0.9em 0.5em;
+    margin-top: 0.5em;
+    cursor:pointer;
+}
+
+
+/*------------------------------
+[20. Media Queries]
+------------------------------*/
+
+
+/* Above 2000px */
+@media all and (min-width: 2000px) {
+
+    .yl-font-controller {
+        font-size: 160%;
+    }
+
+}
+
+/* Above 1600px */
+@media all and (min-width: 1600px) {
+
+    .yl-font-controller {
+        font-size: 140%;
+    }
+
+}
+
+/* Between 1330px to 900px styles */
+@media all and (max-width: 1300px) , screen and (max-device-width: 1300px) {
+
+    .mfp-iframe-holder .mfp-content {
+        max-width: 70%;
+    }
+
+}
+
+/* Between 900px to 600px styles */
+@media all and (max-width: 900px) , screen and (max-device-width: 900px) {
+
+    .yl-font-controller {
+        font-size: 100%;
+    }
+
+    .mfp-iframe-holder .mfp-content {
+        max-width: 75%;
+    }
+
+}
+
+/* Below 600px styles */
+@media all and (max-width: 600px) , screen and (max-device-width: 600px) {
+
+    /*.yl-font-controller {
+        font-size: 115%;
+    }*/
+
+    .yl-header {
+        padding: 5%;
+    }
+
+    .yl-grid.yl-font-controller {
+        font-size: 110%;
+    }
+
+    .yl-grid .yl-wrapper {
+        padding: 8% 6%;
+    }
+
+    .yl-tab-container {
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+    .yl-tab-container i {
+        margin-bottom: 0.35em;
+    }
+
+    .yl-tab {
+        /*width: 100%;*/
+        box-sizing: border-box;
+    }
+
+    .yl-grid .yl-list-title select {
+        padding-left: 1.17em;
+        width: 100%;
+    }
+
+    .mfp-iframe-holder .mfp-content {
+        max-width: 90%;
+    }
+
+    .yl-load-more-button {
+        width: 100%;
+    }
+
+    /*CTA*/
+    .yl-cta-button {
+        width: 100%;
+        margin-top: 1.35em;
+    }
+
+    /*Offer*/
+    .yl-offer {
+        position: static;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    /*Callouts*/
+    .yl-list-callouts .yl-callout,.yl-grid-callouts .yl-callout,.yl-double-list-callouts .yl-callout {
+        width: 100%;
+        margin-right: 0%;
+        margin-bottom: 6.0728%;
+        padding: 0%;
+    }
+
+    .yl-list-callouts .yl-callout-left,.yl-grid-callouts .yl-callout-left,.yl-double-list-callouts .yl-callout-left {
+        width: 100%;
+    }
+
+    .yl-list-callouts .yl-callout-right,.yl-grid-callouts .yl-callout-right,.yl-double-list-callouts .yl-callout-right {
+        width: 100%;
+        padding: 3.5% 6% 6% 6%;
+    }
+
+    .yl-switch {
+        display: none;
+    }
+
+    #yl-sort-order {
+        display: none;
+    }
+
+}
