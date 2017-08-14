@@ -71,13 +71,13 @@ for(var i=0; i<titles.length; i++){
 	if(is_youtube(files[i])){
 		html_ += 'http://i3.ytimg.com/vi/'+ is_youtube(files[i])+'/hqdefault.jpg';
 	}else if(files[i].indexOf("vimeo")>-1){
-		html_ += 'http://1.bp.blogspot.com/-ziC0CBcYtxA/VTs7vMQUWUI/AAAAAAAAASU/dTbpYizqbtI/s1600/pk-fa.png';
+		html_ += 'https://1.bp.blogspot.com/-ynANLDazeoc/WZHYgMO5wlI/AAAAAAAACcQ/woQjIHGF_ZIf8iYyT9lnnVfsYIsw2eDhwCEwYBhgL/s1600/logomv.png';
 
 }else if(files[i].indexOf("vid")>-1){
-		html_ += 'http://1.bp.blogspot.com/-ziC0CBcYtxA/VTs7vMQUWUI/AAAAAAAAASU/dTbpYizqbtI/s1600/pk-fa.png';
+		html_ += 'https://1.bp.blogspot.com/-ynANLDazeoc/WZHYgMO5wlI/AAAAAAAACcQ/woQjIHGF_ZIf8iYyT9lnnVfsYIsw2eDhwCEwYBhgL/s1600/logomv.png';
 
 	}else if(files[i].indexOf("google")>-1){
-		html_ += 'http://1.bp.blogspot.com/-ziC0CBcYtxA/VTs7vMQUWUI/AAAAAAAAASU/dTbpYizqbtI/s1600/pk-fa.png';			
+		html_ += 'https://1.bp.blogspot.com/-ynANLDazeoc/WZHYgMO5wlI/AAAAAAAACcQ/woQjIHGF_ZIf8iYyT9lnnVfsYIsw2eDhwCEwYBhgL/s1600/logomv.png';			
 	}else{
 		html_ += images[i];
 	}
