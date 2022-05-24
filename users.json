@@ -1,5 +1,17 @@
-[
-  {"src": "https://www.youtube.com/embed/2RvIcfhwiO0"},
-  {"src": "https://www.youtube.com/embed/NFYLiB4NRxQ"},
-  {"src": "https://www.youtube.com/embed/yvG44_EVCz8"},
+[{
+        "username": "john",
+        "firstName": "John",
+        "lastName": "Doe",
+        "gender": "Male",
+        "profileURL": "img/male.png",
+        "email": "john.doe@example.com"
+    },
+    {
+        "username": "jane",
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "gender": "Female",
+        "profileURL": "img/female.png",
+        "email": "jane.doe@example.com"
+    }
 ]
