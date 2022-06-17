@@ -1,17 +1,20 @@
-// Khmer Top Channels IPTV Linklist:
+* Khmer IPTV:
 https://livefta.malimarcdn.com/tvkedge/bayonhd.stream/chunklist.m3u8
 https://livefta.malimarcdn.com/tvkedge/btv.stream/chunklist.m3u8
 https://livefta.malimarcdn.com/tvkedge/tvkhd.stream/chunklist.m3u8
 https://livefta.malimarcdn.com/tvkedge/tvk2.stream/chunklist.m3u8
 https://livefta.malimarcdn.com/ftaedge00/khmertv2020.stream/chunklist.m3u8
 https://livefta.malimarcdn.com/ftaedge00/teatv2.sdp/chunklist.m3u8
-https://stream.mekongtv.net/livetv5/tv5.stream/chunklist_w32280845_tkbXR2c3RhcnR0aW1lPTAmbXR2ZW5kdGltZT0xNjI2MjU1MDg0Jm10dmhhc2g9cEw2M3JFMTV0dzVKNVFXSFkxTWk2R09kZjNudkUzR0prQTRta1UwWWZGMD0=.m3u8
+https://seatv.netlinkbroadcaster.com/hls/test.m3u8
+https://live.ams.com.kh/app/stream/playlist.m3u8
+https://stream.mekongtv.net/livetv5/tv5_embed.stream/chunklist_w2022258507_tkbXR2c3RhcnR0aW1lPTAmbXR2ZW5kdGltZT0xNjU1NTQzNzY1Jm10dmhhc2g9TFhwY282Wm1SMlZZYU43WC1ERFlrYlFlYkNLTkd6VlItTzNzaElRaVktcz0=.m3u8
 
-// Thai Top Channels IPTV Linklist 1:
+* Thai IPTV:
 https://freelive.inwstream.com:1936/freelive-edge/3hd/playlist.m3u8
 https://freelive.inwstream.com:1936/freelive-edge/5hd/playlist.m3u8
 https://freelive.inwstream.com:1936/freelive-edge/7hd/playlist.m3u8
 https://freelive.inwstream.com:1936/freelive-edge/ch8/playlist.m3u8
+https://freelive.inwstream.com:1936/freelive-edge/mcothd/playlist.m3u8
 https://freelive.inwstream.com:1936/freelive-edge/amarinhd/playlist.m3u8
 https://freelive.inwstream.com:1936/freelive-edge/onehd/playlist.m3u8
 https://freelive.inwstream.com:1936/freelive-edge/pptvhd/playlist.m3u8
@@ -20,22 +23,4 @@ https://freelive.inwstream.com:1936/freelive-edge/workpointtv/playlist.m3u8
 https://freelive.inwstream.com:1936/freelive-edge/true4u/playlist.m3u8
 https://freelive.inwstream.com:1936/freelive-edge/gmmchannel/playlist.m3u8
 https://freelive.inwstream.com:1936/freelive-edge/mono29/playlist.m3u8
-
-// Thai Top Channels IPTV Linklist 2:
-https://cdnlive.goprimetime.info/feed/ch3hd/index.m3u8
-https://cdnlive.goprimetime.info/feed/ch5hd/index.m3u8
-https://cdnlive.goprimetime.info//feed//ch7hd//index.m3u8
-https://cdnlive.goprimetime.info/feed/ch8/index.m3u8
-https://cdnlive.goprimetime.info/feed/chamarin/index.m3u8
-https://cdnlive.goprimetime.info/feed/chonehd/index.m3u8
-https://cdnlive.goprimetime.info/feed/chpptvhd/index.m3u8
-https://cdnlive.goprimetime.info/feed/chthaipbs/index.m3u8
-https://cdnlive.goprimetime.info/feed/chworkpoint/index.m3u8
-https://cdnlive.goprimetime.info/feed/chtrue4u/index.m3u8
-https://cdnlive.goprimetime.info/feed/chgmm/index.m3u8
-https://cdnlive.goprimetime.info//feed//chmono29//index.m3u8
-
-*Extra Backup:
-https://live.thairath.co.th/trtv2/playlist.m3u8
-https://thaipbs-live.cdn.byteark.com/live/playlist_1080p/index.m3u8
-https://edge6a.v2h-cdn.com/RE_HD/smil:TVB_HD_ABR.smil/playlist.m3u8
+https://freelive2.inwstream.com:1936/freelive-edge/thairahttvhd/playlist.m3u8
